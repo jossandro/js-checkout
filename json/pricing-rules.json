@@ -1,0 +1,36 @@
+{
+  "ipd": {
+		"2018-04-27" : {
+      "quantity": 5,
+      "quantityRule": "plus",
+      "benefit": {
+        "type": "discountFixedPrice",
+        "typeRule": "each",
+        "value": 499.99
+      }      
+    }
+	},
+	"atv": {
+		"2018-04-27" : {
+      "quantity": 3,
+      "quantityRule": "package",
+      "benefit": {
+        "type": "discountFixedPrice",
+        "typeRule": "package",
+        "value": 219
+      }      
+    }
+	},
+	"mbp": {
+		"2018-04-27" : {
+      "quantity": 1,
+      "quantityRule": "plus",
+      "benefit": {
+        "type": "freeProduct",
+        "typeRule": "each",
+        "sku": "vga"
+      }      
+    }
+	}
+}
+
