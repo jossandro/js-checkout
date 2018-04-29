@@ -1,68 +1,26 @@
-class Product {
-    contructor(SKU, name, price){
-        this.SKU = SKU;
-        this.name = name;
-        this.price = price;
-    }
+function checkoutTest(shoppingCart, totalExpected) {
+  results.total++;
+  var Skus = shoppingCart.split(',');
+  var checkout = new Checkout(pricingRulesJson);
+  for(var i=0; i<Skus.length; i++){
+    checkout.scan(productsJson[Skus[i]]);
+  }
+  
+  var result = checkout.total();
+  if (result !== totalExpected) {
+      results.bad++;
+      console.log("Expected " + totalExpected + ", but was " + result);
+  }
 }
-
-class Checkout{
-    constructor(priceRules){
-        this.priceRules = priceRules;
-    }
-
-    scan(product){
-        if(this.products[product.sku]){
-            this.products[product.sku].quantity ++;
-        }else{
-            this.products[product.sku] = product;
-            this.products[product.sku].quantity = 1;
-        }
-    }
-
-    total(){
-        console.log(this.products);
-        // for (var i = 0, len = this.products.length; i < len; i++) {
-        //     console.log(this.products[])
-        // }
-    }
+var results = {
+  total: 0,
+  bad: 0
+};
+function startTest(){
+  checkoutTest("atv,atv,atv,vga", 249.00);
+  checkoutTest("atv,ipd,ipd,atv,ipd,ipd,ipd", 2718.95);
+  checkoutTest("mbp,vga,ipd", 1949.98);
+  console.log("Of " + results.total + " tests, " + results.bad + " failed, " + (results.total - results.bad) + " passed.");
 }
 
 
-function main () {
-    var input = document.querySelector('input');
-    var btn = document.querySelector('button');
-    var para = document.querySelector('p');
-    var checkout = new Checkout();
-    btn.onclick = function() {
-        var sku = input.value;
-        checkout.scan(sku);
-    }
-}
-var productsJson = [];
-var pricingRulesJson = [];
-function preload(){
-    var pricingRulesRequestURLorFile = 'https://github.com/jossandro/js-checkout/blob/master/json/pricing-rules.json?raw=true';
-    var pricingRulesRequest = new XMLHttpRequest();
-    pricingRulesRequest.open('GET', pricingRulesRequestURLorFile);
-    pricingRulesRequest.responseType = 'json';
-    pricingRulesRequest.send();
-    pricingRulesRequest.onload = function() {
-        pricingRulesJson = pricingRulesRequest.response;
-    }
-
-    var productsRequestURLorFile = 'https://github.com/jossandro/js-checkout/blob/master/json/products.json?raw=true';
-    var productsRequest = new XMLHttpRequest();
-    productsRequest.open('GET', productsRequestURLorFile);
-    productsRequest.responseType = 'json';
-    productsRequest.send();
-    productsRequest.onload = function() {
-        productsJson = productsRequest.response;
-    }
-}
-
-
-main();
-
-
-// x.toJSON().substring(0,10)

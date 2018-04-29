@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qantas Developer Test</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+  <body onload="preload()">
+    <div class="header" >
+      <img src="assets/img/qantas_logo.png">
+      <h1>Technical Test - Shopping RUs</h1>
+    </div>
+    <div style="width: 100%">
+        <div class="column">
+          <label for="jscode">Type SKU code:</label>
+          <input type="text" id="jscode">
+          <button>Submit code</button>
+          <p>Possible SKU products:</p>
+          <pre>
+            <code id="srcCode"></code>
+          </pre>
+        </div>
+        <div id="shoppingCart" class="column" ></div>
+    </div>
+  </body>
+  <script src="test.js"></script>
+  <script src="data.js"></script> <!-- comment this line for online checkout -->
+  <script src="checkout.js"></script> <!-- comment this line for online checkout -->
+  <!-- <script src="checkoutOnline.js"></script> UNcomment this line for online checkout -->
+  
+</html>
