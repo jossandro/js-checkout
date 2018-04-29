@@ -120,7 +120,7 @@ function screenControl () {
     }
 }
 
-// This piece of code is just in case you want to try bringing data from a "backend" using micro service to load the products available and price rules
+// From here the code is just in case you want to try bringing data from a "backend" using micro service to load the products available and price rules
 
 const ONLINE = false;
 
