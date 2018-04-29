@@ -3,10 +3,10 @@ This code is the answer for a test for a developer position.
 It has 2 possible ways to get data:
 
 1)EMBEDED / HARD CODED:
-- To use that version, please comment line 30 on index.html and uncomment lines 28 and 29.
+- To use that version, please change the constant ONLINE on checkout.js (line 125) to false.
 
 2)Backend data from Json files (just run on a web server):
-- To use that version, please comment lines 28 and 29 on index.html and uncomment line 30.
+- To use that version, please change the constant ONLINE on checkout.js (line 125) to true.
 
 To run it, please unzip the file and open the file index.html in a browser.
 
@@ -16,3 +16,17 @@ This code is just an exercise, it is not a final version of any application.
 It is just to demostrate one of many ways we have to solve the problem described (checkout and sales). 
 This solution can be applied as a frontend solution, just to display the right price to the user (needs to be double checked on the backend)
 or can be easely adapted to be used in a backend with NodeJs
+
+
+Comments about the solution created:
+At the moment we have 2 different discount implementations:
+* discountFixedPrice:
+This option allow the sales manager to create any promotion to give to the users a fixed discount price, it has 2 different settings at the moment:
+- Each product: Allow the sales manager to give a discounted price per each product on certain, it can be on bulk (buying some defined quantity) or just for one unit.
+- Package: Allow the sales manager to create packages like "buy 3 pay 2" for any product.
+
+* freeProduct:
+This optios is for giving a free product when the user buy a specific product.
+
+Those rules are defined by the sales manager. The system was design in a way that it is easy to create new discount rules.
+In order to create a new discount rule, a programmer just need to create another method to handle the math involved on it and add another case to the salePrice function to call its method.
