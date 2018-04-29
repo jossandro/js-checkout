@@ -22,11 +22,11 @@ Comments about the solution created:
 At the moment we have 2 different discount implementations:
 * discountFixedPrice:
 This option allow the sales manager to create any promotion to give to the users a fixed discount price, it has 2 different settings at the moment:
-- Each product: Allow the sales manager to give a discounted price per each product on certain, it can be on bulk (buying some defined quantity) or just for one unit.
+- Each product: Allow the sales manager to give a discounted price per each product on certain, it can be in bulk (buying some defined quantity) or just for one unit.
 - Package: Allow the sales manager to create packages like "buy 3 pay 2" for any product.
 
 * freeProduct:
-This optios is for giving a free product when the user buy a specific product.
+This option is for giving a free product when the user buys a specific product.
 
-Those rules are defined by the sales manager. The system was design in a way that it is easy to create new discount rules.
-In order to create a new discount rule, a programmer just need to create another method to handle the math involved on it and add another case to the salePrice function to call its method.
+Those rules are defined by the sales manager. The system was designed in a way that it is easy to create new discount rules.
+In order to create a new discount rule, a programmer just needs to create another method to handle the math involved in it and add another case to the salePrice function to call its method.
