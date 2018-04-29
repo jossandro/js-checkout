@@ -92,7 +92,7 @@ class Checkout{
         }else{
             if (regularProduct.quantity >= priceRule.quantity){
                 if(this.freeProductCandidate[priceRule.benefit.SKU] === undefined){
-                    this.freeProductCandidate[priceRule.benefit.SKU] = 1;
+                    this.freeProductCandidate[priceRule.benefit.SKU] = regularProduct.quantity;
                 }else{
                     this.freeProductCandidate[priceRule.benefit.SKU] ++;
                 }
@@ -122,7 +122,7 @@ function screenControl () {
 
 // This piece of code is just in case you want to try bringing data from a "backend" using micro service to load the products available and price rules
 
-const ONLINE = true;
+const ONLINE = false;
 
 if(ONLINE){
     var productsJson = [];

@@ -20,6 +20,7 @@ function startTest(){
   checkoutTest("atv,atv,atv,vga", 249.00);
   checkoutTest("atv,ipd,ipd,atv,ipd,ipd,ipd", 2718.95);
   checkoutTest("mbp,vga,ipd", 1949.98);
+  checkoutTest("mbp,vga,mbp,vga", 2799.98);
   console.log("Of " + results.total + " tests, " + results.bad + " failed, " + (results.total - results.bad) + " passed.");
 }
 
