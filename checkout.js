@@ -120,9 +120,38 @@ function screenControl () {
     }
 }
 
-function preload(){
-    // this function is only used on ONLINE checktou, please refer to read.me
+// This piece of code is just in case you want to try bringing data from a "backend" using micro service to load the products available and price rules
+
+const ONLINE = true;
+
+if(ONLINE){
+    var productsJson = [];
+    var pricingRulesJson = [];
 }
 
-screenControl();
-startTest();
+function preload(){
+    if(ONLINE){
+        var pricingRulesRequestURLorFile = 'http://simplejscheckout.bitballoon.com/assets/json/pricing-rules.json?date=2018-04-30';
+        var pricingRulesRequest = new XMLHttpRequest();
+        pricingRulesRequest.open('GET', pricingRulesRequestURLorFile);
+        pricingRulesRequest.responseType = 'json';
+        pricingRulesRequest.send();
+        pricingRulesRequest.onload = function() {
+            pricingRulesJson = pricingRulesRequest.response;
+        }
+    
+        var productsRequestURLorFile = 'http://simplejscheckout.bitballoon.com/assets/json/products.json?date=2018-04-30';
+        var productsRequest = new XMLHttpRequest();
+        productsRequest.open('GET', productsRequestURLorFile);
+        productsRequest.responseType = 'json';
+        productsRequest.send();
+        productsRequest.onload = function() {
+            productsJson = productsRequest.response;
+            screenControl();
+            startTest();
+        }
+    }else{
+        screenControl();
+        startTest();
+    }
+}
