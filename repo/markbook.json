@@ -1,0 +1,122 @@
+{ 
+  students: [{
+    "studentId": 513,
+    "contactId": 514,
+    "firstName" : "Krysten",
+    "surname": "Bashforth",
+    "taskMarks": {
+      3879: {
+        "taskId": 3879,
+        "studTaskRawMarkId": 3380,
+        "mark": 75.6
+      },
+      3469: {
+        "taskId": 3469,
+        "studTaskRawMarkId": 3093,
+        "mark": 272.008
+      },
+      3880: {
+        "taskId": 3880,
+        "studTaskRawMarkId": 4193,
+        "mark": 171
+      }
+    }
+  },
+  {
+    "studentId": 505,
+    "contactId": 506,
+    "firstName" : "Betsy",
+    "surname": "Beachell",
+    "taskMarks": {
+      3469: {
+        "taskId": 3469,
+        "studTaskRawMarkId": 3164,
+        "mark": 224.00000000000003
+      },
+      3879: {
+        "taskId": 3879,
+        "studTaskRawMarkId": 3380,
+        "mark": 67.2
+      },
+      3880: {
+        "taskId": 3880,
+        "studTaskRawMarkId": 4193,
+        "mark": 44
+      }
+    }
+  },
+  {
+    "studentId": 530,
+    "contactId": 531,
+    "firstName" : "Kyan",
+    "surname": "Boroughs",
+    "taskMarks": {
+      3879: {
+        "taskId": 3879,
+        "studTaskRawMarkId": 3380,
+        "mark": 73.3
+      },
+      3469: {
+        "taskId": 3469,
+        "studTaskRawMarkId": 3093,
+        "mark": 272.008
+      },
+      3880: {
+        "taskId": 3880,
+        "studTaskRawMarkId": 4193,
+        "mark": 88
+      }
+    }
+  }],
+  tasks: [{
+    "taskId": 3469,
+    "task": "Australian Poets",
+    "taskTypeId": 2,
+    "description": "",
+    "markOutOf": 75,
+    "weighting": 50,
+    "mean": 165.63,
+    "median": 200,
+    "standardDeviation": 51.18,
+    "maxMark": 256.5
+  },
+  {
+    "taskId": 3879,
+    "task": "Grammar Examination",
+    "taskTypeId": 2,
+    "description": "",
+    "markOutOf": 50,
+    "weighting": 21,
+    "mean": 28.5,
+    "median": 31.66,
+    "standardDeviation": 7.86,
+    "maxMark": 37.5
+  },
+  {
+    "taskId": 3880,
+    "task": "Exposition Writing Essay",
+    "taskTypeId": 2,
+    "description": "",
+    "markOutOf": 30,
+    "weighting": 25,
+    "mean": 0,
+    "median": 0,
+    "standardDeviation": 0,
+    "maxMark": 0
+  }],
+
+  menuList: [
+    { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Ancient History', subtitle: 'Year 11', link: '/maingrid' },
+    { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Ancient History', subtitle: 'Year 12', link: '/maingrid' },
+    { icon: 'explore', iconClass: 'blue lighten-1 white--text', title: 'Biblical Studies', subtitle: 'Year 1', link: '/maingrid' },
+    { icon: 'explore', iconClass: 'blue lighten-1 white--text', title: 'Biblical Studies', subtitle: 'Year 10', link: '/maingrid' },
+    { icon: 'explore', iconClass: 'blue lighten-1 white--text', title: 'Biblical Studies', subtitle: 'Year 11', link: '/maingrid' },
+    { icon: 'room', iconClass: 'amber lighten-1 white--text', title: 'English Standart', subtitle: 'Year 12', link: '/markgrid' },
+    { icon: 'room', iconClass: 'amber lighten-1 white--text', title: 'English Standart', subtitle: 'Year 11', link: '/markgrid' },
+    { icon: 'import_contacts', iconClass: 'yellow lighten-1 black--text', title: 'Geography', subtitle: 'Year 9', link: '/markgrid' },
+    { icon: 'import_contacts', iconClass: 'yellow lighten-1 black--text', title: 'Geography', subtitle: 'Year 10', link: '/markgrid' },
+    { icon: 'import_contacts', iconClass: 'yellow lighten-1 black--text', title: 'Geography', subtitle: 'Year 11', link: '/markgrid' },
+    { icon: 'import_contacts', iconClass: 'yellow lighten-1 black--text', title: 'Geography', subtitle: 'Year 12', link: '/markgrid' },
+    { icon: 'import_contacts', iconClass: 'green lighten-1 white--text', title: 'Senior Study', subtitle: '', link: '/markgrid' },
+  ]
+}
